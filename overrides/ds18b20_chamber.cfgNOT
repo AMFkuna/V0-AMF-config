@@ -1,0 +1,19 @@
+# If the machine is equiped by a temperature sensor in the chamber
+# it will be used to measure and control the chamber heatsoak
+
+# This file is very specific to DS18B20 sensors connected to the Pi 1Wire interface
+# See: https://forum.vorondesign.com/threads/adding-a-temperature-sensor-when-youre-out-of-thermistor-ports.186/
+
+[gcode_macro _USER_VARIABLES]
+variable_chamber_temperature_sensor_enabled: True
+variable_chamber_temperature_sensor_name: "Chamber"
+gcode:
+
+[mcu rpi]
+serial: /tmp/klipper_host_mcu
+
+[temperature_sensor Chamber]
+gcode_id: chamber
+sensor_type: DS18B20
+serial_no: 28-000003a8fc92
+sensor_mcu: rpi
