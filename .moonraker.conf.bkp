@@ -56,7 +56,7 @@ path = ~/mainsail
 url = pover://uxx2q3e6wkc7ojtg3f5f8k5qjtaprh@aex1136mdqf1unr7t8jzegppggsy23
 events = *
 title = V0-AMF
-body = Printing {event_name} {event_args[1].filename}
+body = {event_name} {event_args[1].filename}
 attach = http://localhost/webcam/?action=snapshot
 
 [update_manager crowsnest]
